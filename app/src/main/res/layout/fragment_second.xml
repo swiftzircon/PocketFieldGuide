@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondFragment">
+
+    <Button
+        android:id="@+id/button_second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Browse Matches"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/limbs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Number of Limbs"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/purple_200"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/LimbsradioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/limbs"
+        app:layout_constraintTop_toBottomOf="@+id/limbs">
+
+        <RadioButton
+            android:id="@+id/limbradioButton1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/purple_200" />
+
+        <RadioButton
+            android:id="@+id/limbradioButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/purple_200" />
+
+        <RadioButton
+            android:id="@+id/limbradioButton3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="4"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/purple_200" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/colors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="Present Colors"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/purple_200"
+        app:layout_constraintStart_toStartOf="@+id/LimbsradioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/LimbsradioGroup" />
+
+    <CheckBox
+        android:id="@+id/colorradioButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/color_1_red"
+        android:drawablePadding="-10dp"
+        android:layout_marginTop="5dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toStartOf="@+id/colors"
+        app:layout_constraintTop_toBottomOf="@+id/colors" />
+
+    <CheckBox
+        android:id="@+id/colorradioButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/color_2_brickred"
+        android:drawablePadding="-10dp"
+        android:layout_marginTop="5dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toEndOf="@+id/colorradioButton1"
+        app:layout_constraintTop_toBottomOf="@+id/colors" />
+
+    <CheckBox
+        android:id="@+id/colorradioButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/color_3_deepbrown"
+        android:drawablePadding="-10dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toEndOf="@+id/colorradioButton2"
+        app:layout_constraintTop_toTopOf="@+id/colorradioButton2" />
+
+    <CheckBox
+        android:id="@+id/colorradioButton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/color_4_lightbrown"
+        android:drawablePadding="-10dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toEndOf="@+id/colorradioButton3"
+        app:layout_constraintTop_toTopOf="@+id/colorradioButton3" />
+
+    <CheckBox
+        android:id="@+id/colorradioButton5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/color_5_orange"
+        android:drawablePadding="-10dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toEndOf="@+id/colorradioButton4"
+        app:layout_constraintTop_toTopOf="@+id/colorradioButton4" />
+
+    <CheckBox
+        android:id="@+id/colorradioButton6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/color_6_gold"
+        android:drawablePadding="-10dp"
+        android:layout_marginTop="5dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toStartOf="@+id/colorradioButton1"
+        app:layout_constraintTop_toBottomOf="@+id/colorradioButton1" />
+
+    <CheckBox
+        android:id="@+id/colorradioButton7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/color_7_lime"
+        android:drawablePadding="-10dp"
+        android:layout_marginTop="5dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toEndOf="@+id/colorradioButton6"
+        app:layout_constraintTop_toBottomOf="@+id/colorradioButton1" />
+
+    <CheckBox
+        android:id="@+id/colorradioButton8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/color_8_deepgreen"
+        android:drawablePadding="-10dp"
+        android:layout_marginTop="5dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toEndOf="@+id/colorradioButton7"
+        app:layout_constraintTop_toBottomOf="@+id/colorradioButton2" />
+
+    <CheckBox
+        android:id="@+id/colorradioButton9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/color_9_bluegreen"
+        android:drawablePadding="-10dp"
+        android:layout_marginTop="5dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toEndOf="@+id/colorradioButton8"
+        app:layout_constraintTop_toBottomOf="@+id/colorradioButton3" />
+
+    <CheckBox
+        android:id="@+id/colorradioButton10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/color_10_blue"
+        android:drawablePadding="-10dp"
+        android:layout_marginTop="5dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toEndOf="@+id/colorradioButton9"
+        app:layout_constraintTop_toBottomOf="@+id/colorradioButton4" />
+
+    <CheckBox
+        android:id="@+id/colorradioButton11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/color_11_brightblue"
+        android:drawablePadding="-10dp"
+        android:layout_marginTop="5dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toStartOf="@+id/colorradioButton6"
+        app:layout_constraintTop_toBottomOf="@+id/colorradioButton6" />
+
+    <CheckBox
+        android:id="@+id/colorradioButton12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/color_12_magenta"
+        android:drawablePadding="-10dp"
+        android:layout_marginTop="5dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toEndOf="@+id/colorradioButton11"
+        app:layout_constraintTop_toBottomOf="@+id/colorradioButton6" />
+
+    <CheckBox
+        android:id="@+id/colorradioButton13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/color_13_black"
+        android:drawablePadding="-10dp"
+        android:layout_marginTop="5dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toEndOf="@+id/colorradioButton12"
+        app:layout_constraintTop_toBottomOf="@+id/colorradioButton7" />
+
+    <CheckBox
+        android:id="@+id/colorradioButton14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/color_14_gray"
+        android:drawablePadding="-10dp"
+        android:layout_marginTop="5dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toEndOf="@+id/colorradioButton13"
+        app:layout_constraintTop_toBottomOf="@+id/colorradioButton8" />
+
+    <CheckBox
+        android:id="@+id/colorradioButton15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/color_15_lightgray"
+        android:drawablePadding="-10dp"
+        android:layout_marginTop="5dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toEndOf="@+id/colorradioButton14"
+        app:layout_constraintTop_toBottomOf="@+id/colorradioButton9" />
+
+    <CheckBox
+        android:id="@+id/colorradioButton16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/color_16_white"
+        android:drawablePadding="-10dp"
+        android:layout_marginTop="5dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toStartOf="@+id/colorradioButton11"
+        app:layout_constraintTop_toBottomOf="@+id/colorradioButton11" />
+
+    <TextView
+        android:id="@+id/Aquatic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="Aquatic Species"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/purple_200"
+        app:layout_constraintStart_toStartOf="@+id/colorradioButton16"
+        app:layout_constraintTop_toBottomOf="@+id/colorradioButton16" />
+
+    <RadioGroup
+        android:id="@+id/AquaticradioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/Aquatic"
+        app:layout_constraintTop_toBottomOf="@+id/Aquatic">
+
+        <RadioButton
+            android:id="@+id/Aquaticradiobutton1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Yes"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/purple_200" />
+
+        <RadioButton
+            android:id="@+id/Aquaticradiobutton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/purple_200" />
+
+        <RadioButton
+            android:id="@+id/Aquaticradiobutton3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Unsure"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/purple_200" />
+    </RadioGroup>
+</androidx.constraintlayout.widget.ConstraintLayout>
