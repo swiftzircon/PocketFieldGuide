@@ -199,12 +199,8 @@ public class Database extends SQLiteOpenHelper {
         // Define list that we'll return data in
         List returnList = new ArrayList();
 
-        SQLiteDatabase db;
-        //String DBPath = mContext.getDatabasePath("species.db").getPath();
-        db = this.getReadableDatabase();
-
         // Retrieve matching data from read database
-        //SQLiteDatabase db = this.getReadableDatabase();
+        SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(query, null);
 
         if (cursor.moveToFirst()){

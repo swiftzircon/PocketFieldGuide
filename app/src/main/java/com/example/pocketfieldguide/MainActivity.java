@@ -1,12 +1,14 @@
 package com.example.pocketfieldguide;
 
 import android.content.Intent;
+import android.content.res.AssetManager;
 import android.os.Bundle;
 
 import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.util.Log;
 import android.view.View;
 
 import androidx.fragment.app.Fragment;
@@ -23,14 +25,25 @@ import com.example.pocketfieldguide.databinding.ActivityMainBinding;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+
 public class MainActivity extends AppCompatActivity {
 
+    private static String DB_PATH;
     private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // Copies database over onto device from asset folder
+        copyDatabase();
+
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -80,4 +93,31 @@ public class MainActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, appBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+
+    // Database file moving methods
+    private void copyDatabase(){
+        //Cody to copy the database file from app/assets/databases onto the device data/data/databases folder.
+        DB_PATH = "/data/data/" + this.getPackageName() + "/databases/";
+        try {
+            System.out.println("myfile" + DB_PATH);
+            InputStream in = this.getAssets().open("species.db");
+            String outFile = DB_PATH + "species.db";
+            OutputStream out = new FileOutputStream(outFile);
+            byte[] buffer = new byte[1024];
+            int length;
+            while ((length = in.read(buffer)) > 0) {
+                out.write(buffer, 0, length);
+            }
+            // Closing filestreams
+            out.flush();
+            out.close();
+            in.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
 }
